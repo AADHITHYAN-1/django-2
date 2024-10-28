@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }} <!-- Renders form fields with paragraph tags around them for better readability -->
+
+    {% if form.errors %}
+    <div class="error">
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
